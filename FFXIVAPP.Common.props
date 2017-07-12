@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Choose>
+    <When Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+      <ItemGroup>
+		<Reference Include="FFXIVAPP.Common, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\FFXIVAPP.Common.3.0.0\lib\NET461\FFXIVAPP.Common.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+		<ProjectReference Include="..\..\ffxivapp-common\FFXIVAPP.Common\FFXIVAPP.Common.csproj">
+		  <Project>{8d6cda64-78be-4bf0-b613-0c9afa225df5}</Project>
+		  <Name>FFXIVAPP.Common</Name>
+		</ProjectReference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+</Project>
+    
