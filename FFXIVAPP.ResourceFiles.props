@@ -3,9 +3,9 @@
   <Choose>
     <When Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
       <ItemGroup>
-		<ProjectReference Include="..\..\ffxivapp-common\FFXIVAPP.Common\FFXIVAPP.Common.csproj">
-		  <Project>{8d6cda64-78be-4bf0-b613-0c9afa225df5}</Project>
-		  <Name>FFXIVAPP.Common</Name>
+		<ProjectReference Include="..\..\ffxivapp-resourcefiles\FFXIVAPP.ResourceFiles\FFXIVAPP.ResourceFiles.csproj">
+		  <Project>{38e2405f-58d4-411c-b1dF-6e2d6f14082e}</Project>
+		  <Name>FFXIVAPP.ResourceFiles</Name>
 		</ProjectReference>
       </ItemGroup>
     </When>
