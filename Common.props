@@ -11,6 +11,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,7 +23,8 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>..\distribution\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>..\distribution\$(TargetName).xml</DocumentationFile>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseDeploy|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,7 +36,8 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>..\distribution\$(AssemblyName).xml</DocumentationFile>
+    <DocumentationFile>..\distribution\$(TargetName).xml</DocumentationFile>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
 </Project>
     
