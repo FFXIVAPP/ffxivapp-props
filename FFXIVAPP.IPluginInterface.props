@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Choose>
-    <When Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <When Condition="'$(Configuration)'=='Debug'">
       <ItemGroup>
-		<ProjectReference Include="..\..\ffxivapp-iplugininterface\FFXIVAPP.IPluginInterface\FFXIVAPP.IPluginInterface.csproj">
-		  <Project>{56e3fd21-17c4-4306-ba2c-adaf6aaea330}</Project>
-		  <Name>FFXIVAPP.IPluginInterface</Name>
-		</ProjectReference>
+        <ProjectReference Include="..\..\ffxivapp-iplugininterface\FFXIVAPP.IPluginInterface\FFXIVAPP.IPluginInterface.csproj">
+          <Project>{391BC459-5E0D-4CC5-8CC6-E01F899E732F}</Project>
+          <Name>FFXIVAPP.IPluginInterface</Name>
+        </ProjectReference>
+        <Reference Include="FFXIVAPP.IPluginInterface, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\ffxivapp-iplugininterface\build\Debug\FFXIVAPP.IPluginInterface.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(Configuration)'=='Release'">
+      <ItemGroup>
+        <Reference Include="FFXIVAPP.IPluginInterface, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\FFXIVAPP.IPluginInterface.5.0.6\lib\net462\FFXIVAPP.IPluginInterface.dll</HintPath>
+        </Reference>
       </ItemGroup>
     </When>
   </Choose>
 </Project>
-    

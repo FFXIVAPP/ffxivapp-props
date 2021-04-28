@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Choose>
-    <When Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <When Condition="'$(Configuration)'=='Debug'">
       <ItemGroup>
-		<ProjectReference Include="..\..\ffxivapp-resourcefiles\FFXIVAPP.ResourceFiles\FFXIVAPP.ResourceFiles.csproj">
-		  <Project>{38e2405f-58d4-411c-b1dF-6e2d6f14082e}</Project>
-		  <Name>FFXIVAPP.ResourceFiles</Name>
-		</ProjectReference>
+        <ProjectReference Include="..\..\ffxivapp-resourcefiles\FFXIVAPP.ResourceFiles\FFXIVAPP.ResourceFiles.csproj">
+          <Project>{4F8437FC-EE41-4A15-80FC-93BF579A2E28}</Project>
+          <Name>FFXIVAPP.ResourceFiles</Name>
+        </ProjectReference>
+        <Reference Include="FFXIVAPP.ResourceFiles, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\ffxivapp-resourcefiles\build\Debug\FFXIVAPP.ResourceFiles.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(Configuration)'=='Release'">
+      <ItemGroup>
+        <Reference Include="FFXIVAPP.ResourceFiles, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\FFXIVAPP.ResourceFiles.2.0.2\lib\net462\FFXIVAPP.ResourceFiles.dll</HintPath>
+        </Reference>
       </ItemGroup>
     </When>
   </Choose>
 </Project>
-    

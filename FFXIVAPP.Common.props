@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Choose>
-    <When Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <When Condition="'$(Configuration)'=='Debug'">
       <ItemGroup>
-		<ProjectReference Include="..\..\ffxivapp-common\FFXIVAPP.Common\FFXIVAPP.Common.csproj">
-		  <Project>{8d6cda64-78be-4bf0-b613-0c9afa225df5}</Project>
-		  <Name>FFXIVAPP.Common</Name>
-		</ProjectReference>
+        <ProjectReference Include="..\..\ffxivapp-common\FFXIVAPP.Common\FFXIVAPP.Common.csproj">
+          <Project>{06DF4BAD-D35B-4D0F-9AF6-2BC28EA3C1CD}</Project>
+          <Name>FFXIVAPP.Common</Name>
+        </ProjectReference>
+        <Reference Include="FFXIVAPP.Common, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\ffxivapp-common\build\Debug\FFXIVAPP.Common.dll</HintPath>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <When Condition="'$(Configuration)'=='Release'">
+      <ItemGroup>
+        <Reference Include="FFXIVAPP.Common, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\packages\FFXIVAPP.Common.6.0.0\lib\net462\FFXIVAPP.Common.dll</HintPath>
+        </Reference>
       </ItemGroup>
     </When>
   </Choose>
